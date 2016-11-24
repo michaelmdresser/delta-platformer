@@ -34,7 +34,7 @@ class Wall(pygame.sprite.Sprite):
         """ Constructor function """
 
         # Call the parent's constructor
-        super().__init__()
+        super(Wall, self).__init__()
 
         # Make a BLUE wall, of the size specified in the parameters
         self.image = pygame.Surface([width, height])
@@ -58,7 +58,7 @@ class Player(pygame.sprite.Sprite):
         """ Constructor function """
 
         # Call the parent's constructor
-        super().__init__()
+        super(Player, self).__init__()
 
         # Set height, width
         self.image = pygame.Surface([15, 15])
@@ -121,7 +121,7 @@ class Room(object):
 class Room1(Room):
     """This creates all the walls in room 1"""
     def __init__(self):
-        super().__init__()
+        super(Room1, self).__init__()
         # Make the walls. (x_pos, y_pos, width, height)
 
         # This is a list of walls. Each is in the form [x, y, width, height]
@@ -143,7 +143,7 @@ class Room1(Room):
 class Room2(Room):
     """This creates all the walls in room 2"""
     def __init__(self):
-        super().__init__()
+        super(Room2, self).__init__()
 
         walls = [[0, 0, 20, 250, RED],
                  [0, 350, 20, 250, RED],
@@ -163,7 +163,7 @@ class Room2(Room):
 class Room3(Room):
     """This creates all the walls in room 3"""
     def __init__(self):
-        super().__init__()
+        super(Room3, self).__init__()
 
         walls = [[0, 0, 20, 250, PURPLE],
                  [0, 350, 20, 250, PURPLE],
